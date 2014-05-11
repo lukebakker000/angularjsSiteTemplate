@@ -1,0 +1,15 @@
+<div class="head">Contact Us</div>
+<img class="close" src="images/close.png" ng-click="closeForm()" />
+<form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
+    <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
+    <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
+    <textarea class="textarea" rows="5" required="required" placeholder="your message" ng-model="message.text" ></textarea>
+    <button class="btn green">send message</button>
+</form>
+
+<!-- contact us form response messages -->
+<div ng-show="process" style="text-align:center">
+    <img class="loader" src="images/loader.png" />
+</div>
+<div ng-show="success"><p>Your message has been sent, thank you.</p></div>
+      
